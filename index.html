@@ -1,31 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>Test</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Petition For June 4 Holiday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-background:black;
+background:#070707;
+font-family:'Inter',sans-serif;
 color:white;
-font-family:Arial;
-padding:100px;
+padding:40px 20px;
+background-image:
+radial-gradient(circle at top, rgba(255,0,0,0.15), transparent 40%);
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#121212;
+padding:50px;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 0 50px rgba(255,0,0,0.1);
+position:relative;
+}
+
+.live{
+position:absolute;
+top:30px;
+right:30px;
+background:#240000;
+padding:10px 16px;
+color:#ff3b3b;
+font-weight:800;
+border:1px solid rgba(255,0,0,0.3);
+}
+
+.govt{
+font-size:12px;
+letter-spacing:2px;
+border:1px solid rgba(255,255,255,0.15);
+display:inline-block;
+padding:10px 14px;
+margin-bottom:30px;
 }
 
 h1{
-font-size:60px;
-color:red;
+font-size:54px;
+line-height:1;
+font-weight:900;
+margin-bottom:30px;
+text-transform:uppercase;
 }
+
+.sub{
+font-size:20px;
+line-height:1.7;
+color:#d0d0d0;
+margin-bottom:40px;
+}
+
+.counter-box{
+background:#0d0d0d;
+padding:30px;
+text-align:center;
+margin-bottom:40px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.counter{
+font-size:70px;
+font-weight:900;
+color:#ff3b3b;
+}
+
+.counter-text{
+margin-top:10px;
+font-size:18px;
+color:#d0d0d0;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,
+select{
+padding:18px;
+background:#0d0d0d;
+border:1px solid rgba(255,255,255,0.1);
+color:white;
+font-size:16px;
+}
+
+button{
+padding:20px;
+background:#ff2d2d;
+border:none;
+color:white;
+font-size:18px;
+font-weight:800;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff4f4f;
+}
+
+.success{
+display:none;
+margin-top:60px;
+}
+
+.success h2{
+font-size:42px;
+margin-bottom:30px;
+color:#ff3b3b;
+}
+
+.certificate{
+background:#f5f0e6;
+color:#111;
+padding:50px;
+border:8px double #111;
+margin-bottom:30px;
+position:relative;
+}
+
+.certificate h3{
+font-size:36px;
+margin-bottom:30px;
+}
+
+.certificate p{
+font-size:22px;
+line-height:1.8;
+}
+
+.stamp{
+position:absolute;
+right:40px;
+bottom:40px;
+border:4px solid red;
+color:red;
+padding:16px;
+font-size:28px;
+font-weight:900;
+transform:rotate(-10deg);
+}
+
+.letter{
+background:#0d0d0d;
+padding:40px;
+margin-top:30px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.letter h3{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.letter-text{
+white-space:pre-line;
+line-height:1.8;
+font-size:18px;
+color:#d0d0d0;
+}
+
+.downloads{
+display:flex;
+gap:20px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.hashtag{
+text-align:center;
+margin-top:60px;
+font-size:42px;
+font-weight:900;
+color:#ff3b3b;
+}
+
+@media(max-width:768px){
+
+.container{
+padding:30px 20px;
+}
+
+h1{
+font-size:36px;
+}
+
+.counter{
+font-size:42px;
+}
+
+.certificate h3{
+font-size:26px;
+}
+
+.certificate p{
+font-size:16px;
+}
+
+.hashtag{
+font-size:28px;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>JUNE 4</h1>
+<div class="container">
 
-<p>The site is working.</p>
+<div class="live">● LIVE</div>
+
+<div class="govt">
+GOVERNMENT PETITION PORTAL
+</div>
+
+<h1>
+PETITION TO DECLARE JUNE 4<br>
+A NATIONAL PUBLIC HOLIDAY
+</h1>
+
+<div class="sub">
+In the matter of declaring June 4, 2026 a National Public Holiday in the interest of the people of India and the sanctity of Dhurandhar: The Revenge.<br><br>
+
+Over 300 million Indians have plans on June 4. We request the nation be given the time to honour them.
+</div>
+
+<div class="counter-box">
+
+<div class="counter" id="counter">
+300,000,000
+</div>
+
+<div class="counter-text">
+Indians have formally demanded June 4 off.
+</div>
+
+</div>
+
+<form id="petitionForm">
+
+<input type="text" id="name" placeholder="FULL NAME" required>
+
+<input type="text" id="city" placeholder="CITY" required>
+
+<select id="reason" required>
+
+<option value="">SELECT REASON FOR LEAVE</option>
+
+<option>Require uninterrupted viewing conditions</option>
+
+<option>Need time to manage family viewing arrangements</option>
+
+<option>Require mental preparation for Dhurandhar: The Revenge</option>
+
+<option>Must avoid all spoilers from colleagues who watched early</option>
+
+<option>In national interest — India watches together</option>
+
+<option>*Personal reasons (classified)</option>
+
+</select>
+
+<button type="submit">
+SUBMIT PETITION
+</button>
+
+</form>
+
+<div class="success" id="success">
+
+<h2>
+PETITION SUCCESSFULLY FILED
+</h2>
+
+<div class="certificate" id="certificate">
+
+<h3>OFFICIAL CERTIFICATE</h3>
+
+<p>
+This certifies that <strong id="certName"></strong><br><br>
+
+has formally petitioned for June 4 to be declared a National Public Holiday in order to watch Dhurandhar: The Revenge on JioHotstar.<br><br>
+
+Petition Status: Pending.<br>
+Viewing Plans: Confirmed.
+</p>
+
+<div class="stamp">
+PENDING
+</div>
+
+</div>
+
+<div class="downloads">
+
+<button onclick="downloadCertificate()">
+DOWNLOAD CERTIFICATE
+</button>
+
+<button onclick="copyLetter()">
+COPY LEAVE LETTER
+</button>
+
+</div>
+
+<div class="letter">
+
+<h3>LEAVE LETTER</h3>
+
+<div class="letter-text" id="letterText"></div>
+
+</div>
+
+</div>
+
+<div class="hashtag">
+#WHEREWILLYOUBE
+</div>
+
+</div>
+
+<script>
+
+let currentCount = 300000000;
+
+const counter = document.getElementById("counter");
+
+setInterval(()=>{
+
+currentCount += Math.floor(Math.random()*4);
+
+counter.innerText = currentCount.toLocaleString();
+
+},2000);
+
+const form = document.getElementById("petitionForm");
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+
+const city = document.getElementById("city").value;
+
+document.getElementById("success").style.display = "block";
+
+document.getElementById("certName").innerText = name;
+
+const leaveLetter =
+`Dear Manager,
+
+In national interest and to avoid irreversible spoilers, I request leave on June 4, 2026.
+
+My viewing plans for Dhurandhar: The Revenge have been confirmed.
+
+Regards,
+${name}
+${city}`;
+
+document.getElementById("letterText").innerText = leaveLetter;
+
+window.scrollTo({
+top:document.getElementById("success").offsetTop,
+behavior:"smooth"
+});
+
+});
+
+function copyLetter(){
+
+const text = document.getElementById("letterText").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Leave letter copied successfully.");
+
+}
+
+function downloadCertificate(){
+
+alert("Certificate download simulation complete.");
+
+}
+
+</script>
 
 </body>
-
 </html>
